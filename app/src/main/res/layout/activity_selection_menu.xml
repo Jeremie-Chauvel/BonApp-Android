@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+
+    tools:context="com.bonapp.bonapp.SelectionMenu">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/selectionMenu_buttonMenu"
+                style="@style/MyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="@string/menu"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="83dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/activity_selection_menu_Plat"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:contentDescription="@string/menuScreenImages1"-->
+            <!--app:srcCompat="@drawable/viande"/>-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/activity_selection_menu_Accompagnement"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:contentDescription="@string/menuScreenImages2"-->
+            <!--app:srcCompat="@drawable/frites"/>-->
+
+            <!--</LinearLayout>-->
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Today"
+                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/My_choice"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"/>
+
+            <RadioGroup
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <!--J'ai ajouté du padding pour placer les boutons-->
+
+                <RadioButton
+                    android:id="@+id/activity_selection_menu_radioButton_JeMange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/I_eat"/>
+
+                <RadioButton
+                    android:id="@+id/activity_selection_menu_radioButton_JeNeMangePas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/I_don_t_eat"/>
+            </RadioGroup>
+
+        </LinearLayout>
+        <!--On utilise le grid layout pour placer les checksbox avec les jours-->
+        <GridLayout
+            android:id="@+id/activity_selection_menu_Grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp">
+
+
+            <Button
+                android:id="@+id/activity_selection_menu_button_OK"
+                style="@style/MyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_marginBottom="8dp"
+                android:layout_row="8"
+                android:text="@string/OK"/>
+        </GridLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
